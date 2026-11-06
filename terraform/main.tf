@@ -1,7 +1,6 @@
 resource "aws_instance" "my_ec2" {
   ami           = var.instance_ami
   instance_type = var.instance_type
-<<<<<<< HEAD
 
   vpc_security_group_ids = [aws_security_group.my_sg.id]
 
@@ -42,9 +41,4 @@ resource "aws_security_group" "my_sg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-=======
-  tags = {
-    Name = var.instance_name
-  }
->>>>>>> 5ce8c675cae77d637a67dccc78f7a6dcc2587df9
 }

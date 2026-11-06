@@ -1,0 +1,8 @@
+target/
+terraform/
+.git/
+.idea/
+.vscode/
+*.iml
+Dockerfile
+.dockerignore
