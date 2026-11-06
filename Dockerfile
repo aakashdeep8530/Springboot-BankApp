@@ -4,7 +4,7 @@ WORKDIR /src
 COPY . /src
 RUN mvn clean install -DskipTests=true
 
-#------ Stage 2: Create a lightweight image for application ------  
+#------ Stage 2: Create a lightweight image for application -----  
 FROM openjdk:17-alpine as developer
 COPY --from=builder /src/target/*.jar /src/target/bankapp.jar
 EXPOSE 8080
